@@ -1,9 +1,9 @@
 function Landing() {
   return (
-    <div className=' flex justify-center items-center'>
-        <h1 className='bg-red-300'>Valentines</h1>
-        <div>
-            gang gang
+    <div className='flex justify-center items-center p-8'>
+        <h1 className="font-bold">Be my Valentine!</h1>
+        <div className="mt-12" id="wrapper">
+            <div id="pulsingheart"></div>
         </div>
 
     </div>
