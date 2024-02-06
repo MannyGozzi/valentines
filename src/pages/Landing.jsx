@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { IoCube } from "react-icons/io5";
 import { FaLink } from "react-icons/fa";
-
+import { IoCopy } from "react-icons/io5";
 
 
 function Landing() {
@@ -20,6 +20,10 @@ const genLink = () => {
     url.searchParams.set('to', toName);
     url.searchParams.set('from', fromName);
     setLink(url.href);
+}
+
+const copyToClipboard = () => {
+    navigator.clipboard.writeText(link);
 }
 
   return (
@@ -59,10 +63,14 @@ const genLink = () => {
             </div>
 
             {
-                link && (
-                    <a href={link} target="_blank" rel="noreferrer" className={`transition-all duration-300 ${link.length > 40 ? "text-sm" : "text-lg"} p-4 bg-pink-100 rounded-2xl flex  gap-2 text-pink-500 font-bold text-2xl mt-4`}>
-                        <FaLink />{link}
-                    </a>
+                link && (<div className='flex items-center justify-center mt-4'>
+                        <a href={link} target="_blank" rel="noreferrer" className={`transition-all duration-300 ${link.length > 40 ? "text-sm" : "text-lg"} p-4 bg-pink-100 rounded-2xl flex  gap-2 text-pink-500 font-bold text-2xl rounded-r-none`}>
+                            <FaLink />{link}
+                        </a>
+                        <button className={`bg-white p-4 h-full rounded-2xl rounded-l-none transition-all duration-300 !outline-none hover:text-pink-500 focus:text-pink-500`} onClick={copyToClipboard}>
+                            <IoCopy/>
+                        </button>
+                    </div>
                 )
             }
         </div>
