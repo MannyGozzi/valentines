@@ -4,9 +4,8 @@
   text-align: center;
 }
 
-
 #wrapper {
-	position: absolute;
+	position: relative;
 	animation:pulse 1s infinite;
 }
 
@@ -24,7 +23,7 @@
   top: 0; 
   width: 50px; 
   height: 80px; 
-  background: #aa0000; 
+  background: #ff2c96; 
   border-radius: 50px 50px 0 0; 
   transform: rotate(-45deg);  
   transform-origin: 0 100%;
@@ -43,5 +42,5 @@
 }
 
 @keyframes pulsecolor {
-  10% {background: #dd0000}
+  10% {background: #ff0a5c}
 }
