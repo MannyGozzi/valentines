@@ -1,6 +1,6 @@
 import {useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-// import { IoArrowBackCircle } from "react-icons/io5";
+import { IoArrowBackCircle } from "react-icons/io5";
 
 const anims = `!outline-none focus:ring-8 focus:ring-pink-400 focus:bg-pink-200 hover:ring-8 hover:ring-pink-400 hover:bg-pink-200 transition-all duration-300 ease-in-out`
 const buttonStyles = "bg-pink-300 border-[.3rem] border-pink-500 text-pink-500 text-2xl font-bold rounded-2xl p-4 mt-4 mb-4 letter-spacing-2 flex items-center justify-center gap-3 select-none"
@@ -69,12 +69,12 @@ function Valentine() {
         </button>
       </div>
       <h2 className="text-2xl text-pink-500 font-bold mt-4">{shout}</h2>
-      {/* <button
+      <button
           type="button"
-          className={`${anims} ${yes ? "max-h-[4rem]" : "max-h-0 opacity-0 overflow-hidden"} overflow-hidden bg-pink-300 border-[.3rem] border-pink-500 text-pink-500 text-2xl font-bold rounded-2xl p-2 px-3 mt-4 mb-4 letter-spacing-2 flex items-center justify-center gap-2`}
+          className={`${anims} ${yes || no >= gifs.length - 2 ? "max-h-[4rem]" : "max-h-0 opacity-0 overflow-hidden"} overflow-hidden bg-pink-300 border-[.3rem] border-pink-500 text-pink-500 text-2xl font-bold rounded-2xl p-2 px-3 mt-4 mb-4 letter-spacing-2 flex items-center justify-center gap-2`}
           onClick={() => navigate('../')}
       ><IoArrowBackCircle className='transition-all duration-500 hover:text-black hover:rotate-90' size={32}/> <p className='h-full'>Go back</p>
-      </button> */}
+      </button>
     </div>
   );
     }
